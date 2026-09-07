@@ -1,4 +1,5 @@
 const WORDS = {
+  architecture: ["window","Reinforced Concrete","Plot Ratio","CCC","CPC","Modernism","Bomba Inspection"]
   movies: ["Titanic","Frozen","Avatar","Harry Potter","Toy Story","Jurassic Park","The Lion King","Spider-Man","Batman","Finding Nemo"],
   food: ["Pizza","Sushi","Burger","Nasi Lemak","Satay","Ramen","Ice Cream","Durian","Fried Chicken","Pancakes"],
   animals: ["Elephant","Penguin","Giraffe","Kangaroo","Dolphin","Crocodile","Panda","Monkey","Tiger","Rabbit"],
