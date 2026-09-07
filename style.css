@@ -446,12 +446,24 @@ button {
 
 
 .countdown-number {
-  font-size: clamp(7rem, 28vw, 14rem);
-  line-height: 0.9;
-  font-weight: 800;
+
+  margin-top: 15px;
+
+  font-size:
+    clamp(
+      130px,
+      30vw,
+      260px
+    );
+
+  line-height: 0.8;
+
   letter-spacing: -0.08em;
-  color: var(--ink);
-  animation: countdownPulse 0.8s ease-out;
+
+  animation:
+    countdownPulse
+    1s
+    ease-in-out;
 }
 
 
