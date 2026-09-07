@@ -329,16 +329,70 @@ playAgainButton.addEventListener(
 ========================================= */
 
 async function beginRoundPreparation() {
+
+  /*
+    First attempt fullscreen.
+    Browsers require this to happen
+    from a user interaction.
+  */
+
+  await enterFullscreen();
+
+
+  /*
+    Ask for iPhone motion permission.
+  */
+
   await enableMotion();
 
-  shuffledTerms = shuffle([...TERMS]);
+
+  /*
+    Attempt native landscape.
+  */
+
+  await enterLandscape();
+
+
+  /*
+    Prepare game.
+  */
+
+  gameTerms =
+    shuffle(TERMS);
+
   currentIndex = 0;
+
   score = 0;
+
   correctTerms = [];
+
   passedTerms = [];
 
-  startScreen.classList.remove("active");
-  countdownScreen.classList.add("active");
+  timeRemaining =
+    ROUND_DURATION;
+
+  gameActive = false;
+
+
+  scoreElement.textContent =
+    "00";
+
+  timerElement.textContent =
+    ROUND_DURATION;
+
+  timerBar.style.width =
+    "100%";
+
+  feedbackElement.textContent =
+    "";
+
+
+  updateProgress();
+
+
+  /*
+    Show countdown.
+  */
 
   runCountdown();
 }
