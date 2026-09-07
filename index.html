@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#111111">
+  <title>Heads Up! V1</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <section id="home" class="screen active">
+      <div class="logo">HEADS<span>UP</span></div>
+      <p class="tagline">Your custom guessing game</p>
+
+      <div class="card panel">
+        <label for="category">Category</label>
+        <select id="category">
+          <option value="mixed">Mixed</option>
+          <option value="movies">Movies</option>
+          <option value="food">Food</option>
+          <option value="animals">Animals</option>
+          <option value="places">Places</option>
+        </select>
+
+        <label for="duration">Round length</label>
+        <select id="duration">
+          <option value="30">30 seconds</option>
+          <option value="60" selected>60 seconds</option>
+          <option value="90">90 seconds</option>
+        </select>
+
+        <button id="startBtn" class="primary">START GAME</button>
+      </div>
+
+      <div class="instructions">
+        <h3>How to play</h3>
+        <p>Hold the phone against your forehead so the word faces your teammates.</p>
+        <p><b>Tilt down</b> = Correct &nbsp; • &nbsp; <b>Tilt up</b> = Pass</p>
+        <p>You can also use the buttons below the card.</p>
+      </div>
+    </section>
+
+    <section id="game" class="screen">
+      <header class="game-header">
+        <span id="categoryLabel">MIXED</span>
+        <span id="timer">60</span>
+        <span>Score: <b id="score">0</b></span>
+      </header>
+
+      <div class="progress"><div id="progressBar"></div></div>
+
+      <div id="wordCard" class="word-card">
+        <div class="small">GET YOUR TEAM TO GUESS</div>
+        <div id="word">READY?</div>
+      </div>
+
+      <div class="controls">
+        <button id="passBtn" class="danger">↥<br><span>PASS</span></button>
+        <button id="correctBtn" class="success">↧<br><span>CORRECT</span></button>
+      </div>
+
+      <button id="motionBtn" class="motion">📱 ENABLE TILT CONTROLS</button>
+      <p id="motionStatus" class="status">Button controls are always available.</p>
+    </section>
+
+    <section id="results" class="screen">
+      <div class="logo">ROUND<br><span>OVER</span></div>
+      <div class="result-score"><span id="finalScore">0</span><small>points</small></div>
+      <p id="resultMessage">Great game!</p>
+      <button id="againBtn" class="primary">PLAY AGAIN</button>
+      <button id="homeBtn" class="secondary">HOME</button>
+    </section>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
