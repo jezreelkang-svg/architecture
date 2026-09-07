@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+  >
+
+  <meta
+    name="theme-color"
+    content="#f1ead8"
+  >
+
+  <title>Terms You Should Know!</title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+</head>
+
+
+<body>
+
+  <main class="app" id="app">
+
+    <!-- =====================================
+         HEADER
+    ====================================== -->
+
+    <header class="drawing-header">
+
+      <div class="header-left">
+        <span>ARCHITECTURAL GAME</span>
+      </div>
+
+      <div class="header-right">
+        <span>DWG. 001</span>
+        <span>REV. 02</span>
+        <span>NTS</span>
+      </div>
+
+    </header>
+
+
+    <!-- =====================================
+         START SCREEN
+    ====================================== -->
+
+    <section
+      id="startScreen"
+      class="screen active"
+    >
+
+      <div class="blueprint-label">
+        GAME / 02
+      </div>
+
+
+      <h1>
+        TERMS<br>
+        <span>YOU SHOULD KNOW!</span>
+      </h1>
+
+
+      <div class="title-line"></div>
+
+
+      <p class="intro">
+        A 120-second architectural<br>
+        Heads Up challenge.
+      </p>
+
+
+      <!-- Architectural sketch -->
+
+      <div class="building-sketch">
+
+        <svg
+          viewBox="0 0 500 210"
+          aria-hidden="true"
+        >
+
+          <line
+            class="sketch-line"
+            x1="40"
+            y1="190"
+            x2="460"
+            y2="190"
+          />
+
+          <line
+            class="sketch-line"
+            x1="120"
+            y1="175"
+            x2="380"
+            y2="175"
+          />
+
+          <line
+            class="sketch-line"
+            x1="140"
+            y1="175"
+            x2="140"
+            y2="90"
+          />
+
+          <line
+            class="sketch-line"
+            x1="200"
+            y1="175"
+            x2="200"
+            y2="90"
+          />
+
+          <line
+            class="sketch-line"
+            x1="300"
+            y1="175"
+            x2="300"
+            y2="90"
+          />
+
+          <line
+            class="sketch-line"
+            x1="360"
+            y1="175"
+            x2="360"
+            y2="90"
+          />
+
+          <line
+            class="sketch-line"
+            x1="120"
+            y1="90"
+            x2="380"
+            y2="90"
+          />
+
+          <line
+            class="sketch-line"
+            x1="150"
+            y1="55"
+            x2="350"
+            y2="55"
+          />
+
+          <line
+            class="sketch-line"
+            x1="130"
+            y1="40"
+            x2="370"
+            y2="40"
+          />
+
+          <line
+            class="sketch-line"
+            x1="130"
+            y1="40"
+            x2="150"
+            y2="55"
+          />
+
+          <line
+            class="sketch-line"
+            x1="370"
+            y1="40"
+            x2="350"
+            y2="55"
+          />
+
+          <rect
+            class="sketch-line"
+            x="155"
+            y="105"
+            width="30"
+            height="45"
+          />
+
+          <rect
+            class="sketch-line"
+            x="215"
+            y="105"
+            width="30"
+            height="45"
+          />
+
+          <rect
+            class="sketch-line"
+            x="255"
+            y="105"
+            width="30"
+            height="45"
+          />
+
+          <rect
+            class="sketch-line"
+            x="315"
+            y="105"
+            width="30"
+            height="45"
+          />
+
+        </svg>
+
+      </div>
+
+
+      <!-- Instructions -->
+
+      <div class="instructions">
+
+        <div class="instruction">
+
+          <div class="instruction-icon">
+            ↓
+          </div>
+
+          <div>
+            <strong>TILT DOWN</strong>
+            <span>CORRECT</span>
+          </div>
+
+        </div>
+
+
+        <div class="instruction">
+
+          <div class="instruction-icon">
+            ↑
+          </div>
+
+          <div>
+            <strong>TILT UP</strong>
+            <span>PASS</span>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <p class="small-note">
+        The game will enter landscape and fullscreen.
+      </p>
+
+
+      <button
+        id="startButton"
+        class="primary-button"
+      >
+        START ROUND
+      </button>
+
+    </section>
+
+
+
+    <!-- =====================================
+         COUNTDOWN
+    ====================================== -->
+
+    <section
+      id="countdownScreen"
+      class="screen countdown-screen"
+    >
+
+      <div class="countdown-label">
+        PREPARE
+      </div>
+
+      <div
+        id="countdownNumber"
+        class="countdown-number"
+      >
+        3
+      </div>
+
+      <div class="countdown-instruction">
+        HOLD PHONE UPRIGHT
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         GAME SCREEN
+    ====================================== -->
+
+    <section
+      id="gameScreen"
+      class="screen"
+    >
+
+      <div class="game-top">
+
+        <div>
+
+          <span class="label">
+            CATEGORY
+          </span>
+
+          <strong>
+            TERMS YOU SHOULD KNOW!
+          </strong>
+
+        </div>
+
+
+        <div class="score-box">
+
+          <span class="label">
+            SCORE
+          </span>
+
+          <strong id="score">
+            00
+          </strong>
+
+        </div>
+
+      </div>
+
+
+      <!-- Timer -->
+
+      <div class="timer-container">
+
+        <div
+          id="timerBar"
+          class="timer-bar"
+        ></div>
+
+        <div class="timer-text">
+
+          <span id="timer">
+            120
+          </span>
+
+          <span>
+            SEC
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <!-- Progress -->
+
+      <div class="progress-drawing">
+
+        <div class="progress-label">
+
+          <span>
+            CONSTRUCTION PROGRESS
+          </span>
+
+          <span id="progressText">
+            0 / 52
+          </span>
+
+        </div>
+
+
+        <div class="progress-track">
+
+          <div
+            id="progressFill"
+            class="progress-fill"
+          ></div>
+
+        </div>
+
+
+        <div class="progress-stages">
+
+          <span>SITE</span>
+          <span>STRUCTURE</span>
+          <span>ENVELOPE</span>
+          <span>FINISH</span>
+          <span>COMPLETE</span>
+
+        </div>
+
+      </div>
+
+
+      <!-- Word -->
+
+      <div
+        id="wordCard"
+        class="word-card"
+      >
+
+        <span
+          id="wordNumber"
+          class="word-number"
+        >
+          01
+        </span>
+
+
+        <h2 id="currentWord">
+          Plot Ratio
+        </h2>
+
+
+        <div class="word-crosshair">
+          +
+        </div>
+
+      </div>
+
+
+      <!-- Tilt indicator -->
+
+      <div class="tilt-indicator">
+
+        <span>
+          ↓ CORRECT
+        </span>
+
+        <span class="tilt-divider">
+          |
+        </span>
+
+        <span>
+          ↑ PASS
+        </span>
+
+      </div>
+
+
+      <!-- Buttons -->
+
+      <div class="answer-buttons">
+
+        <button
+          id="correctButton"
+          class="answer-button correct-button"
+        >
+          <span>↓</span>
+          CORRECT
+        </button>
+
+
+        <button
+          id="passButton"
+          class="answer-button pass-button"
+        >
+          <span>↑</span>
+          PASS
+        </button>
+
+      </div>
+
+
+      <div
+        id="feedback"
+        class="feedback"
+      ></div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         RESULTS
+    ====================================== -->
+
+    <section
+      id="resultScreen"
+      class="screen"
+    >
+
+      <div class="blueprint-label">
+        ROUND COMPLETE
+      </div>
+
+
+      <h1 class="result-title">
+        FINAL<br>
+        <span>RESULT</span>
+      </h1>
+
+
+      <div class="final-score">
+
+        <span class="label">
+          CORRECT
+        </span>
+
+        <strong id="finalScore">
+          0
+        </strong>
+
+      </div>
+
+
+      <div class="result-summary">
+
+        <div>
+
+          <strong id="correctCount">
+            0
+          </strong>
+
+          <span>
+            CORRECT
+          </span>
+
+        </div>
+
+
+        <div>
+
+          <strong id="passedCount">
+            0
+          </strong>
+
+          <span>
+            PASSED
+          </span>
+
+        </div>
+
+
+        <div>
+
+          <strong id="unseenCount">
+            52
+          </strong>
+
+          <span>
+            NOT REACHED
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <div class="results-grid">
+
+        <div class="result-column">
+
+          <h3>
+            ✓ CORRECT
+          </h3>
+
+          <div
+            id="correctList"
+            class="term-list"
+          ></div>
+
+        </div>
+
+
+        <div class="result-column">
+
+          <h3>
+            ✕ PASSED
+          </h3>
+
+          <div
+            id="passedList"
+            class="term-list"
+          ></div>
+
+        </div>
+
+      </div>
+
+
+      <button
+        id="playAgainButton"
+        class="primary-button"
+      >
+        PLAY AGAIN
+      </button>
+
+    </section>
+
+
+    <footer>
+      TERMS YOU SHOULD KNOW! / 2026
+    </footer>
+
+  </main>
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
